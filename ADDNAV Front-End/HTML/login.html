@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ADDNAV</title>
+    <link rel="stylesheet" href="../CSS/login_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="welcome-section">
+        <div class="logo">
+            <img src="../images/logo.png" alt="ADDNAV Logo">
+        </div>
+        <div class="welcome-text">
+            <h1><span>Welcome!</span><br>Hola!<br>Hello!</h1>
+            <p>Don't have an account yet?</p>
+            <a href="signup.html"><button class="signup-button">SIGN UP</button></a>
+        </div>
+    </div>
+    <div class="login-section">
+        <h1>Login</h1>
+        <form action="homepage.html">
+            <div class="input-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Password" id="password" required>
+                <span class="pass-icon" id="togglePassword"><img src="../images/password.png" alt="input-icon"></span>
+            </div>
+            <button type="submit" class="login-button">LOGIN</button>
+            <div class="divider">
+                <span>or</span>
+            </div>
+            <button type="button" class="google-login">
+                <img src="../images/google_login.png" alt="Google Icon"> Login with GOOGLE
+            </button>
+        </form>
+    </div>
+    <script src="../JAVASCRIPT/main_script.js"></script>
+</body>
+</html>
