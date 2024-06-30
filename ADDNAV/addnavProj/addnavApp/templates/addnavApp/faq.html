@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs | ADDNAV</title>
+    <link rel="stylesheet" href="{% static 'CSS/faq_style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="{% url 'homepage' %}"><img src="{% static 'images/logo.png' %}" alt="ADDNAV Logo"></a>
+            </div>
+            <ul>
+                <li><a href="{% url 'dorm' %}">> Dorms</a></li>&emsp;
+                <li><a href="{% url 'about' %}">> About Us</a></li>&emsp;
+                <li><a href="{% url 'contact' %}">> Contact Us</a></li>&emsp;
+                <li><a href="{% url 'faq' %}">> FAQs</a></li>&emsp;
+                <li><a href="{% url 'logout' %}" class="logout">LOGOUT</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>FAQs</h1>
+            <p>Here are some frequently asked questions about ADDNAV. We're gonna help you find the answer!</p>
+        </div>
+    </header>
+    <section class="faq-section">
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>What should I do if I encounter any issues with a dormitory listed on ADDNAV.com?</h3>
+                <button class="toggle-button">+</button>
+            </div>
+            <div class="faq-answer">
+                <p>If you encounter any issues with a dormitory listed on ADDNAV.com, please contact us immediately through our website or email, and we will assist you in resolving the matter promptly.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Are there any fees for using ADDNAV.com?</h3>
+                <button class="toggle-button">+</button>
+            </div>
+            <div class="faq-answer">
+                <p>No, using ADDNAV.com is completely free for students. However, dormitory owners may be subject to listing fees.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Can I contact dormitory owners through ADDNAV.com?</h3>
+                <button class="toggle-button">+</button>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, you can contact dormitory owners directly through the contact information provided on each listing.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>How often is the information on ADDNAV.com updated?</h3>
+                <button class="toggle-button">+</button>
+            </div>
+            <div class="faq-answer">
+                <p>We strive to keep the information on ADDNAV.com as up-to-date as possible. Our team regularly reviews and updates listings to ensure accuracy.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Can I leave reviews for dormitories on ADDNAV.com?</h3>
+                <button class="toggle-button">+</button>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, you can leave reviews for dormitories you have stayed in to help other students make informed decisions.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-call-to-action">
+        <h2>Still have any questions?</h2>
+        <a href="{% url 'contact' %}" class="contact-button">Contact Us</a>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <a href="{% url 'homepage' %}"><img src="{% static 'images/logo-blue.png' %}" alt="ADDNAV Logo"></a>
+                </div>
+                <p class="footer-text">by ACE Tech</p>
+                <div class="social-media">
+                    <a href="#"><img src="{% static 'images/facebook.png' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'images/google.png' %}" alt="Google"></a>
+                    <a href="#"><img src="{% static 'images/instagram.png' %}" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="{% url 'dorm' %}">> Dorms</a>&emsp;
+                <a href="{% url 'about' %}">> About Us</a>&emsp;
+                <a href="{% url 'contact' %}">> Contact Us</a>&emsp;
+                <a href="{% url 'faq' %}">> FAQs</a>&emsp;
+            </div>
+        </div>
+        <hr>
+        <p>Copyright © 2024 ACE Tech | All rights reserved.</p>
+    </footer>
+    <script src="{% static 'JAVASCRIPT/main_script.js' %}"></script>
+</body>
+</html>

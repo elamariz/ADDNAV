@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | ADDNAV</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/homepage_style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="{% url 'homepage' %}"><img src="{% static 'images/logo.png' %}" alt="ADDNAV Logo"></a>
+            </div>
+            <ul>
+                <li><a href="{% url 'dorm' %}">> Dorms</a></li>&emsp;
+                <li><a href="{% url 'about' %}">> About Us</a></li>&emsp;
+                <li><a href="{% url 'contact' %}">> Contact Us</a></li>&emsp;
+                <li><a href="{% url 'faq' %}">> FAQs</a></li>&emsp;
+                <li><a href="{% url 'logout' %}" class="logout">LOGOUT</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <div class="highlight-block"></div>
+            <h1>Access<br>Comfort.<br><span class="highlight">Explore.</span></h1>
+            <img src="{% static 'images/building.png' %}" alt="Building Image" class="building-image">
+        </div>
+    </header>
+    <section class="features">
+        <div class="features-wrapper">
+            <div class="feature-item">
+                <img src="{% static 'images/accredited.png' %}" alt="Accredited">
+                <h3>Accredited</h3>
+            </div>
+            <div class="divider"></div>
+            <div class="feature-item">
+                <img src="{% static 'images/affordable.png' %}" alt="Affordable">
+                <h3>Affordable</h3>
+            </div>
+            <div class="divider"></div>
+            <div class=" feature-item">
+                <img src="{% static 'images/accessible.png' %}" alt="Accessible">
+                <h3>Accessible</h3>
+            </div>
+        </div>
+    </section>
+    <section class="spaces">
+        <h2>Explore Available Spaces</h2>
+        <div class="space-items">
+            <div class="space-item medroville">
+                <a href="{% url 'medroville' %}">
+                    <img src="{% static 'images/medroville.png' %}" alt="Medroville Residences">
+                    <h3>Medroville Residences</h3>
+                    <p>As Low As</p>
+                    <h4>₱8,500/Month</h4>
+                    <p>Studio Rooms</p>
+                    <div class="details">
+                        <p>Rating: ★★★★☆</p>
+                        <p><img src="{% static 'images/right-arrow.png' %}" alt="Arrow"></p>
+                    </div>
+                </a>
+            </div>
+            <div class="space-item felicitas">
+                <a href="{% url 'felicitas' %}">
+                    <img src="{% static 'images/felicitas.png' %}" alt="Felicitas Residences">
+                    <h3>Felicitas Residences</h3>
+                    <p>As Low As </p>
+                    <h4>₱9,000/Month</h4>
+                    <p>Studio/Double Rooms</p>
+                    <div class="details">
+                        <p>Rating: ★★★★☆</p>
+                        <p><img src="{% static 'images/right-arrow.png' %}" alt="Arrow"></p>
+                    </div>
+                </a>
+            </div>
+            <div class="space-item relos">
+                <a href="{% url 'relos' %}">
+                    <img src="{% static 'images/relos.png' %}" alt="Relos Boarding House">
+                    <h3>Relos Boarding House</h3>
+                    <p>As Low As</p>
+                    <h4>₱3,000/Month</h4>
+                    <p>Studio/Double/Four-Bed Rooms</p>
+                    <div class="details">
+                        <p>Rating: ★★★☆☆</p>
+                        <p><img src="{% static 'images/right-arrow.png' %}" alt="Arrow"></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="{% url 'dorm' %}"><button>View All</button></a>
+        </div>
+    </section>
+    <section class="guidelines">
+        <p>Choosing Your Dorm:</p>
+        <h2>A.T.E.N.E.O. Guidelines</h2>
+        <ul>
+            <li class="guideline-item">
+                <div class="guideline-icon">
+                    <img src="{% static 'images/amenities.png' %}" alt="Amenities Icon">
+                </div>
+                <div class="guideline-letter">A</div>
+                <div class="guideline-content">
+                    <p><strong>Amenities:</strong> Look for dormitories with essential amenities such as study areas, recreational facilities, laundry services, and dining options.</p>
+                </div>
+            </li>
+            <li class="guideline-item">
+                <div class="guideline-icon">
+                    <img src="{% static 'images/transportation.png' %}" alt="Transportation Icon">
+                </div>
+                <div class="guideline-letter">T</div>
+                <div class="guideline-content">
+                    <p><strong>Transportation:</strong> Consider the proximity of the dormitory to public transportation or campus shuttle services for convenience in commuting to classes and other activities.</p>
+                </div>
+            </li>
+            <li class="guideline-item">
+                <div class="guideline-icon">
+                    <img src="{% static 'images/environment.png' %}" alt="Environment Icon">
+                </div>
+                <div class="guideline-letter">E</div>
+                <div class="guideline-content">
+                    <p><strong>Environment:</strong> Assess the overall atmosphere and surroundings of the dormitory, including cleanliness, safety, and noise levels.</p>
+                </div>
+            </li>
+            <li class="guideline-item">
+                <div class="guideline-icon">
+                    <img src="{% static 'images/neighborhood.png' %}" alt="Neighborhood Icon">
+                </div>
+                <div class="guideline-letter">N</div>
+                <div class="guideline-content">
+                    <p><strong>Neighborhood:</strong> Explore the neighborhood surrounding the dormitory to ensure it's safe, convenient, and offers access to essential services like groceries, pharmacies, and healthcare facilities.</p>
+                </div>
+            </li>
+            <li class="guideline-item">
+                <div class="guideline-icon">
+                    <img src="{% static 'images/expenses.png' %}" alt="Expenses Icon">
+                </div>
+                <div class="guideline-letter">E</div>
+                <div class="guideline-content">
+                    <p><strong>Expenses:</strong> Evaluate the cost of living in the dormitory, including rent, utilities, meal plans, and any additional fees, to ensure it fits within your budget.</p>
+                </div>
+            </li>
+            <li class="guideline-item">
+
+                <div class="guideline-icon">
+                    <img src="{% static 'images/ownership.png' %}" alt="Ownership Icon">
+                </div>
+                <div class="guideline-letter">O</div>
+                <div class="guideline-content">
+                    <p><strong>Ownership:</strong> Research the ownership and management of the dormitory to ensure it’s reputable and responsible, providing reliable services and addressing any issues promptly.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <a href="{% url 'homepage' %}"><img src="{% static 'images/logo-blue.png' %}" alt="ADDNAV Logo"></a>
+                </div>
+                <p class="footer-text">by ACE Tech</p>
+                <div class="social-media">
+                    <a href="#"><img src="{% static 'images/facebook.png' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'images/google.png' %}" alt="Google"></a>
+                    <a href="#"><img src="{% static 'images/instagram.png' %}" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="{% url 'dorm' %}">> Dorms</a>&emsp;
+                <a href="{% url 'about' %}">> About Us</a>&emsp;
+                <a href="{% url 'contact' %}">> Contact Us</a>&emsp;
+                <a href="{% url 'faq' %}">> FAQs</a>&emsp;
+            </div>
+        </div>
+        <hr>
+        <p>Copyright © 2024 ACE Tech | All rights reserved.</p>
+    </footer>    
+</body>
+</html>

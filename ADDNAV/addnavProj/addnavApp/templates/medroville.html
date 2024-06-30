@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medroville Residences | ADDNAV</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/medroville_style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="{% url 'homepage' %}"><img src="{% static 'images/logo-blue.png' %}" alt="ADDNAV Logo"></a>
+            </div>
+            <ul>
+                <li><a href="{% url 'dorm' %}">> Dorms</a></li>&emsp;
+                <li><a href="{% url 'about' %}">> About Us</a></li>&emsp;
+                <li><a href="{% url 'contact' %}">> Contact Us</a></li>&emsp;
+                <li><a href="{% url 'faq' %}">> FAQs</a></li>&emsp;
+                <li><a href="{% url 'login' %}" class="logout">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="dorm-images">
+            <img src="{% static 'images/dorm-medroville.png' %}" alt="Medroville Dorm Main Image">
+        </div>
+        <div class="dorm-info">
+            <div class="dorm-details">
+                <div class="dorm-header">
+                    <h1>Medroville Residences</h1>
+                    <div class="availability-rating">
+                        <span class="status">AVAILABLE</span>
+                        <div class="rating">
+                            <span>4.5</span>
+                            <img src="{% static 'images/star.png' %}" alt="Star">
+                            <img src="{% static 'images/star.png' %}" alt="Star">
+                            <img src="{% static 'images/star.png' %}" alt="Star">
+                            <img src="{% static 'images/star.png' %}" alt="Star">
+                            <img src="{% static 'images/half-star.png' %}" alt="Half Star">
+                        </div>
+                    </div>
+                </div>
+                <p class="price">As Low As <br><span>₱8,500/Month</span></p>
+                <h2>Description</h2>
+                <p class="description">
+                    &emsp;&emsp; Located just a 4-minute walk from the Ateneo de Naga University Main Gate and the iconic 4 pillars, Medroville Residences offers convenient studio-type rooms for rent. Each room provides essential amenities for comfortable living. With its proximity to the university, residents can enjoy easy access to campus facilities and nearby conveniences.
+                </p>
+                <h2>Rooms Offered</h2>
+                <p class="rooms">Studio-Type Room (as low as 8,500/month)</p>
+                <h2>Amenities</h2>
+                <ul class="amenities">
+                    <li><img src="{% static 'images/bed.png' %}" alt="Bed"> Bed</li>
+                    <li><img src="{% static 'images/cabinet.png' %}" alt="Cabinets"> Cabinets</li>
+                    <li><img src="{% static 'images/kitchen.png' %}" alt="Kitchenette"> Own Kitchenette</li>
+                    <li><img src="{% static 'images/bathroom.png' %}" alt="Bathroom"> Private Bathroom with Shower and Heater</li>
+                    <li><img src="{% static 'images/wifi.png' %}" alt="WiFi"> WiFi</li>
+                    <li><img src="{% static 'images/cctv.png' %}" alt="CCTV"> 24/7 CCTV</li>
+                    <li><img src="{% static 'images/meter.png' %}" alt="Submeter"> Own submeter</li>
+                </ul>
+            </div>
+            <div class="dorm-contact">
+                <div class="location">
+                    <h2>Location</h2>
+                    <p>Medroville Residences, Mother Francesca St., Ateneo Ave., Naga City</p>
+                    <button class="view-directions">View Directions</button>
+                </div>
+                <hr>
+                <div class="contact-info">
+                    <h2>Contact Info</h2>
+                    <p>Contact No.: +639178552855</p>
+                    <p>Email: medroville@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="rating-summary">
+            <div class="rating-box">
+                <p>Overall Rating</p><br>
+                <div class="rating-text">EXCELLENT</div><br>
+                <div class="rating-score">
+                    <span>4.5 out of 5.0</span>&emsp;
+                    <img src="{% static 'images/star.png' %}" alt="Star">
+                    <img src="{% static 'images/star.png' %}" alt="Star">
+                    <img src="{% static 'images/star.png' %}" alt="Star">
+                    <img src="{% static 'images/star.png' %}" alt="Star">
+                    <img src="{% static 'images/half-star.png' %}" alt="Half Star">
+                </div>
+            </div>
+        </div>
+        <div class="reviews">
+            <h2>Reviews</h2>
+            <div class="review">
+                <div class="reviewer">emilyjoy@gmail.com</div>
+                <div class="review-rating">
+                    <img src="{% static 'images/star.png' %}" alt="Star">
+                    <img src="{% static 'images/star.png' %}" alt="Star">
+                    <img src="{% static 'images/star.png' %}" alt="Star">
+                    <img src="{% static 'images/star.png' %}" alt="Star">
+                    <img src="{% static 'images/half-star.png' %}" alt="Half Star">
+                </div>
+                <div class="review-text">
+                    Loved the vibrant vibes at Medroville! Super comfy beds and great amenities.
+                </div>
+            </div>
+            <hr>
+            <div class="review">
+                <div class="reviewer">johndoe@gmail.com</div>
+                <div class="review-rating">
+                    <img src="{% static 'images/star.png' %}" alt="Star">
+                    <img src="{% static 'images/star.png' %}" alt="Star">
+                    <img src="{% static 'images/star.png' %}" alt="Star">
+                    <img src="{% static 'images/star.png' %}" alt="Star">
+                    <img src="{% static 'images/half-star.png' %}" alt="Half Star">
+                </div>
+                <div class="review-text">
+                    Felt like a home away from home. Clean and comfy!
+                </div>
+            </div>
+            <hr>
+            <div class="rating-input">
+                <div class="rate-us">
+                    <div class="rating-us">Rate us and leave a review!</div><br>
+                    <div class="rating-star">
+                        <img src="{% static 'images/empty-star.png' %}" alt="Star">
+                        <img src="{% static 'images/empty-star.png' %}" alt="Star">
+                        <img src="{% static 'images/empty-star.png' %}" alt="Star">
+                        <img src="{% static 'images/empty-star.png' %}" alt="Star">
+                        <img src="{% static 'images/empty-star.png' %}" alt="Half Star">
+                    </div>
+                </div>
+            </div>
+            <form action="#">
+                <div class="input-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <textarea placeholder="Review" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <a href="{% url 'homepage' %}"><img src="{% static 'images/logo-blue.png' %}" alt="ADDNAV Logo"></a>
+                </div>
+                <p class="footer-text">by ACE Tech</p>
+                <div class="social-media">
+                    <a href="#"><img src="{% static 'images/facebook.png' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'images/google.png' %}" alt="Google"></a>
+                    <a href="#"><img src="{% static 'images/instagram.png' %}" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="{% url 'dorm' %}">> Dorms</a>&emsp;
+                <a href="{% url 'about' %}">> About Us</a>&emsp;
+                <a href="{% url 'contact' %}">> Contact Us</a>&emsp;
+                <a href="{% url 'faq' %}">> FAQs</a>&emsp;
+            </div>
+        </div>
+        <hr>
+        <p>Copyright © 2024 ACE Tech | All rights reserved.</p>
+    </footer>
+</body>
+</html>

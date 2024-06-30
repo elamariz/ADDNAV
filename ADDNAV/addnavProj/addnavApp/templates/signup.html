@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | ADDNAV</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/signup_style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="signup-section">
+        <h1>Create Account</h1>
+        <form method="POST" action="{% url 'signup' %}">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="form-group">
+                {{ form.username }}
+                {{ form.username.errors }}
+            </div>
+            <div class="form-group">
+                {{ form.email }}
+                {{ form.email.errors }}
+            </div>
+            <div class="form-group">
+                {{ form.password1 }}
+                {{ form.password1.errors }}
+            </div>
+            <div class="form-group">
+                {{ form.password2 }}
+                {{ form.password2.errors }}
+            </div>
+            <button type="submit" class="signup-button">Sign Up</button>
+            <div class="divider">
+                <span>or</span>
+            </div>
+            <button type="button" class="google-signup">
+                <img src="{% static 'images/google_login.png' %}" alt="Google Icon"> Sign Up with GOOGLE
+            </button>
+        </form>
+    </div>
+    <div class="welcome-section">
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="ADDNAV Logo">
+        </div>
+        <div class="welcome-text">
+            <h1><span>Access</span><br>Comfort.<br>Explore.</h1>
+            <p>Already have an account?</p>
+            <a href="{% url 'login' %}"><button class="login-button">LOGIN</button></a>
+        </div>
+    </div>
+    <script src="{% static 'JAVASCRIPT/main_script.js' %}"></script>
+</body>
+</html>

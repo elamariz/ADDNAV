@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ADDNAV</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/about_style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="{% url 'homepage' %}"><img src="{% static 'images/logo.png' %}" alt="ADDNAV Logo"></a>
+            </div>
+            <ul>
+                <li><a href="{% url 'dorm' %}">> Dorms</a></li>&emsp;
+                <li><a href="{% url 'about' %}">> About Us</a></li>&emsp;
+                <li><a href="{% url 'contact' %}">> Contact Us</a></li>&emsp;
+                <li><a href="{% url 'faq' %}">> FAQs</a></li>&emsp;
+                <li><a href="{% url 'login' %}" class="logout">LOGOUT</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>About Us</h1>
+            <p>Experience the future of dormitory hunting with ACE Tech's ADDNAV.com. Simplify searches,<br>save on expenses, and transform student living.</p>
+            <p>Learn more about us today!</p>
+        </div>
+    </header>
+    <section class="about-company">
+        <h2>About Company</h2>
+        <div class="company-content">
+            <p>
+                Introducing ACE Tech, the innovative powerhouse driving the evolution of dormitory searches through ADDNAV.com. Our mission is clear: to streamline the process, alleviate financial burdens, and elevate the student living experience to new heights.
+                <br><br>
+                At ACE Tech, we're not just about helping students find their perfect dormitory; we're also committed to empowering dormitory owners. By maximizing their exposure and optimizing investments, we ensure mutual success and sustainability.
+                <br><br>
+                Our dedicated team is at the heart of everything we do. With their expertise and unwavering commitment, we continuously provide users with the most up-to-date insights and options. Join us on our journey as we revolutionize the dormitory search experience and redefine student living with ADDNAV.com.
+            </p>
+            <div class="company-image">
+                <img src="{% static 'images/company.png' %}" alt="Company Image">
+            </div>
+        </div>
+        <div class="objectives">
+            <div class="objectives-wrapper">
+                <h2>Our Objectives</h2>
+                <div class="objective-items">
+                    <div class="objective-item">
+                        <img src="{% static 'images/streamline.png' %}" alt="Streamline Icon">
+                        <div>
+                            <h4>Streamline</h4>
+                            <p>Dorm Search</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <img src="{% static 'images/enhance.png' %}" alt="Enhance Icon">
+                        <div>
+                            <h4>Enhance</h4>
+                            <p>Student Living</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <img src="{% static 'images/support.png' %}" alt="Support Icon">
+                        <div>
+                            <h4>Support</h4>
+                            <p>Dorm Owners</p>
+                        </div>
+                    </div>
+                    <div class="objective-item">
+                        <img src="{% static 'images/provide.png' %}" alt="Provide Icon">
+                        <div>
+                            <h4>Provide</h4>
+                            <p>Updated Info</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <p>Introducing the dynamic trio behind ACE Tech: Angelea, Carlos, and Ela. These innovative minds, <br>students at Ateneo de Naga University, are the driving force behind ADDNAV.com. Ready to <br>meet the team making dorm hunting a breeze?</p>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="{% static 'images/angelea.png' %}" alt="Angelea">
+                <div class="team-container">
+                    <h3>Angelea O. Dela Torre</h3>
+                    <p>Founder</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="{% static 'images/facebook.png' %}" alt="Facebook"></a>
+                        <a href="#"><img src="{% static 'images/google.png' %}" alt="Google"></a>
+                        <a href="#"><img src="{% static 'images/instagram.png' %}" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/carlos.png' %}" alt="Carlos">
+                <div class="team-container">
+                    <h3>Carlos Matthew A. Sierra</h3>
+                    <p>Founder</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="{% static 'images/facebook.png' %}" alt="Facebook"></a>
+                        <a href="#"><img src="{% static 'images/google.png' %}" alt="Google"></a>
+                        <a href="#"><img src="{% static 'images/instagram.png' %}" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{% static 'images/ela.png' %}" alt="Ela">
+                <div class="team-container">
+                    <h3>Ela Mariz Z. Rivera</h3>
+                    <p>Founder</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="{% static 'images/facebook.png' %}" alt="Facebook"></a>
+                        <a href="#"><img src="{% static 'images/google.png' %}" alt="Google"></a>
+                        <a href="#"><img src="{% static 'images/instagram.png' %}" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <a href="{% url 'homepage' %}"><img src="{% static 'images/logo-blue.png' %}" alt="ADDNAV Logo"></a>
+                </div>
+                <p class="footer-text">by ACE Tech</p>
+                <div class="social-media">
+                    <a href="#"><img src="{% static 'images/facebook.png' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'images/google.png' %}" alt="Google"></a>
+                    <a href="#"><img src="{% static 'images/instagram.png' %}" alt="Instagram"></a> 
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="{% url 'dorm' %}">> Dorms</a>&emsp;
+                <a href="{% url 'about' %}">> About Us</a>&emsp;
+                <a href="{% url 'contact' %}">> Contact Us</a>&emsp;
+                <a href="{% url 'faq' %}">> FAQs</a>&emsp;
+            </div>
+        </div>
+        <hr>
+        <p>Copyright © 2024 ACE Tech | All rights reserved.</p>
+    </footer>  
+</body>
+</html>

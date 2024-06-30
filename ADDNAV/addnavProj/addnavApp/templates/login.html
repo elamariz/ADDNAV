@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ADDNAV</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/login_style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="welcome-section">
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="ADDNAV Logo">
+        </div>
+        <div class="welcome-text">
+            <h1><span>Welcome!</span><br>Hola!<br>Hello!</h1>
+            <p>Don't have an account yet?</p>
+            <a href="{% url 'signup' %}"><button class="signup-button">SIGN UP</button></a>
+        </div>
+    </div>
+    <div class="login-section">
+        <h1>Login</h1>
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div class="input-group">
+                {{ form.username }}
+            </div>
+            <div class="input-group">
+                {{ form.password }}
+            </div>
+            {% if form.non_field_errors %}
+                <div class="error">
+                    {{ form.non_field_errors }}
+                </div>
+            {% endif %}
+            <button type="submit" class="login-button">LOGIN</button>
+            <div class="divider">
+                <span>or</span>
+            </div>
+            <button type="button" class="google-login">
+                <img src="{% static 'images/google_login.png' %}" alt="Google Icon"> Login with GOOGLE
+            </button>
+        </form>
+    </div>
+    <script src="{% static 'JAVASCRIPT/main_script.js' %}"></script>
+</body>
+</html>

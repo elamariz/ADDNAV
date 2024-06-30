@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dormitory Listings | ADDNAV</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/dorm_style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="{% url 'homepage' %}"><img src="{% static 'images/logo.png' %}" alt="ADDNAV Logo"></a>
+            </div>
+            <ul>
+                <li><a href="{% url 'dorm' %}">> Dorms</a></li>&emsp;
+                <li><a href="{% url 'about' %}">> About Us</a></li>&emsp;
+                <li><a href="{% url 'contact' %}">> Contact Us</a></li>&emsp;
+                <li><a href="{% url 'faq' %}">> FAQs</a></li>&emsp;
+                <li><a href="{% url 'login' %}" class="logout">LOGOUT</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <div class="highlight-block"></div>
+            <div class="hero-content">
+                <h1><span>Explore</span></h1>
+                <p>Discover our dormitory listings to find the perfect space for your needs.<br>Search now for available dormitories.</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+            <img src="{% static 'images/dorm_building1.png' %}" alt="Left Aligned Image" class="left-image">
+            <img src="{% static 'images/dorm_building2.png' %}" alt="Right Aligned Image" class="right-image">
+        </div>
+    </header>
+    <section class="dormitory-offerings">
+        <h2>Dormitory Offerings</h2>
+        <div class="dormitory-items">
+            <a href="{% url 'medroville' %}" class="dormitory-item">
+                <div class="status available">AVAILABLE</div>
+                <img src="{% static 'images/medroville.png' %}" alt="Medroville Residences">
+                <h4>Medroville Residences</h4>
+                <p>As Low As</p>
+                <h5>₱8,500/Month</h5>
+                <p>Studio Room</p>
+                <div class="details">
+                    <p>Rating: ★★★★★</p>
+                </div>
+            </a>
+            <a href="{% url 'felicitas' %}" class="dormitory-item">
+                <div class="status available">AVAILABLE</div>
+                <img src="{% static 'images/felicitas.png' %}" alt="Felicitas Residences">
+                <h4>Felicitas Residences</h4>
+                <p>As Low As</p>
+                <h5>₱9,000/Month</h5>
+                <p>Studio/Double Rooms</p>
+                <div class="details">
+                    <p>Rating: ★★★★☆</p>
+                </div>
+            </a>
+            <a href="{% url 'relos' %}" class="dormitory-item">
+                <div class="status available">AVAILABLE</div>
+                <img src="{% static 'images/relos.png' %}" alt="Relos Boarding House">
+                <h4>Relos Boarding House</h4>
+                <p>As Low As</p>
+                <h5>₱3,000/Month</h5>
+                <p>Studio/Double/Four-Bed Rooms</p>
+                <div class="details">
+                    <p>Rating: ★★★★☆</p>
+                </div>
+            </a>
+            <a href="{% url 'aquebo' %}" class="dormitory-item">
+                <div class="status full">FULL</div>
+                <img src="{% static 'images/aquebo.png' %}" alt="Aquebo Residencia">
+                <h4>Aquebo Residencia</h4>
+                <p>As Low As</p>
+                <h5>₱7,000/Month</h5>
+                <p>Studio/Double Rooms</p>
+                <div class="details">
+                    <p>Rating: ★★★★★</p>
+                </div>
+            </a>
+        </div>
+        <div class="pagination">
+            <button>&lt;</button>
+            <button class="active">1</button>
+            <button>&gt;</button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <a href="{% url 'homepage' %}"><img src="{% static 'images/logo-blue.png' %}" alt="ADDNAV Logo"></a>
+                </div>
+                <p class="footer-text">by ACE Tech</p>
+                <div class="social-media">
+                    <a href="#"><img src="{% static 'images/facebook.png' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'images/google.png' %}" alt="Google"></a>
+                    <a href="#"><img src="{% static 'images/instagram.png' %}" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="{% url 'dorm' %}">> Dorms</a>&emsp;
+                <a href="{% url 'about' %}">> About Us</a>&emsp;
+                <a href="{% url 'contact' %}">> Contact Us</a>&emsp;
+                <a href="{% url 'faq' %}">> FAQs</a>&emsp;
+            </div>
+        </div>
+        <hr>
+        <p>Copyright © 2024 ACE Tech | All rights reserved.</p>
+    </footer>  
+</body>
+</html>

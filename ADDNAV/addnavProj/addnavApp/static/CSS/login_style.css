@@ -1,0 +1,212 @@
+/* General reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../images/login_bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 0px 60px 0px 150px;
+}
+
+/* Welcome section styling */
+.welcome-section {
+    color: #fff;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;  
+    position: relative;
+    height: 80vh;
+}
+
+.welcome-section .logo {
+    position: absolute;
+    left: 120px;
+    top: 20px;
+}
+
+.welcome-section img {
+    width: 150px;
+}
+
+.welcome-text h1 {
+    padding-top: 50px;
+    font-family: 'Alata', sans-serif;
+    font-size: 5.5em;
+    line-height: 115%;
+    font-weight: 400;
+    position: relative;
+}
+
+.welcome-text h1 span {
+    background: linear-gradient(to right, #049EE3, #049ce300);
+    display: inline;
+    padding: 0px 100px 0px 5px; /* Adjust padding to match the highlight block effect */
+    color: white; /* Ensure text color remains readable */
+}
+
+.welcome-text p {
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.signup-button {
+    background-color: #049EE3;
+    color: #fff;
+    width: 30%;
+    height: 8%;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.signup-button:hover {
+    background-color: #004a94;
+}
+
+.login-section {
+    background-color: #fff;
+    width: 40%;
+    height: 95%;
+    display: flex;
+    align-self: last baseline;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.login-section h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #00396B;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    transform: translateX(-15%); 
+}
+
+.input-group input {
+    width: 120%;
+    padding: 12px 20px; /* Adjust padding to match the design */
+    font-size: 0.8em;
+    font-weight: 200;
+    color: #000000;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+}
+
+.input-group input::placeholder {
+    color: #b9b7b7;
+    font-size: smaller;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-group .pass-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+/* Login button styling */
+.login-button {
+    background-color: #049EE3;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 120%;
+    transform: translateX(-15%); 
+}
+
+.login-button:hover {
+    background-color: #004a94;
+}
+
+.divider {
+    width: 120%;
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+    transform: translateX(-15%);
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.divider:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: .5em;
+}
+
+.divider span {
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+/* Google login button styling */
+.google-login {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 120%; 
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+    transform: translateX(-15%);
+}
+
+.google-login img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.google-login:hover {
+    background-color: #a71d2a;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    margin-top: 10px;
+}
